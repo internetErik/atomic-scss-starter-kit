@@ -1,319 +1,390 @@
 $pxs: 0, 1, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400;
-
+$percentages: 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 33.3333, 35, 40, 45, 50, 55, 60, 65, 66.6666, 70, 75, 80, 85, 90, 95, 100;
 //padding/margin/height/width
 @each $w in $pxs {
-  .p#{$w} {
+  .p\(#{$w}px\) {
     padding: #{$w}px;
   }
   
-  .p#{$w}-0 {
+  .p\(#{$w}px\,0\) {
     padding: #{$w}px 0;
   }
   
-  .p0-#{$w} {
+  .p\(0\,#{$w}px\) {
     padding: 0 #{$w}px;
   }
-  
-  .pt#{$w} {
+}
+
+@each $w in $pxs {
+  .pt\(#{$w}px\) {
     padding-top: #{$w}px;
   }
   
-  .pb#{$w} {
+  .pb\(#{$w}px\) {
     padding-bottom: #{$w}px;
   }
   
-  .pr#{$w} {
+  .pr\(#{$w}px\) {
     padding-right: #{$w}px;
   }
   
-  .pl#{$w} {
+  .pl\(#{$w}px\) {
     padding-left: #{$w}px;
   }
   
-  .m#{$w} {
+  .m\(#{$w}px\) {
     margin: #{$w}px;
   }
   
-  .m#{$w}-0 {
+  .m\(#{$w}px\,0\) {
     margin: #{$w}px 0;
   }
   
-  .m0-#{$w} {
+  .m\(0\,#{$w}\) {
     margin: 0 #{$w}px;
   }
   
-  .mt#{$w} {
+  .mt\(#{$w}px\) {
     margin-top: #{$w}px;
   }
   
-  .mb#{$w} {
+  .mb\(#{$w}px\) {
     margin-bottom: #{$w}px;
   }
   
-  .mr#{$w} {
+  .mr\(#{$w}px\) {
     margin-right: #{$w}px;
   }
   
-  .ml#{$w} {
+  .ml\(#{$w}px\) {
     margin-left: #{$w}px;
   }
 
-  .h#{$w} {
-  	height: #{$w}px;
+  .h\(#{$w}px\) {
+    height: #{$w}px;
   }
 
-  .w#{$w} {
-  	width: #{$w}px;
+  .w\(#{$w}px\) {
+    width: #{$w}px;
   }
 
-  .t#{$w} {
-  	top: #{$w}px;
+  .t\(#{$w}px\) {
+    top: #{$w}px;
   }
 
-  .b#{$w} {
-  	bottom: #{$w}px;
+  .b\(#{$w}px\) {
+    bottom: #{$w}px;
   }
 
-  .l#{$w} {
-  	left: #{$w}px;
+  .l\(#{$w}px\) {
+    left: #{$w}px;
   }
 
-  .r#{$w} {
-  	right: #{$w}px;
+  .r\(#{$w}px\) {
+    right: #{$w}px;
   }
+}
+
+.m\(0\,auto\) {
+  margin: 0 auto;
 }
 
 $zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
 @each $z in $zs {
-	.z#{$z} {
-		z-index: $z;
-	}
+  .z\(#{$z}\) {
+    z-index: $z;
+  }
 }
 
 //display
-.dn {
-	display: none;
+.d\(n\) {
+  display: none;
 }
 
-.d-i {
-	display: inline;
+.d\(i\) {
+  display: inline;
 }
 
-.db {
-	display: block;
+.d\(b\) {
+  display: block;
 }
 
-.dib {
-	display: inline-block;
+.d\(ib\) {
+  display: inline-block;
 }
 
 //position
-.posr {
-	position: relative;
+.pos\(r\) {
+  position: relative;
 }
 
-.posa {
-	position: absolute;
+.pos\(a\) {
+  position: absolute;
 }
 
-.posf {
-	position: fixed;
+.pos\(f\) {
+  position: fixed;
 }
 
 //overflows
-.oh {
-	overflow: hidden;
+.o\(h\) {
+  overflow: hidden;
 }
 
-.oa {
-	overflow: auto;
+.o\(a\) {
+  overflow: auto;
 }
 
-.oya {
-	overflow-y: auto;
+.oy\(a\) {
+  overflow-y: auto;
 } 
 
-.oyh {
-	overflow-y: hidden;
+.oy\(h\) {
+  overflow-y: hidden;
 }
 
-.oxa {
-	overflow-x: auto;
+.ox\(a\) {
+  overflow-x: auto;
 }
 
-.oxh {
-	overflow-x: hidden;
+.ox\(h\) {
+  overflow-x: hidden;
 }
 
 //floats
-.fl {
-	float: left;
+.f\(l\) {
+  float: left;
 }
 
-.fr {
-	float: right;
+.f\(r\) {
+  float: right;
 }
 
 //clears
-.clb {
-	clear: both;
+.cl\(b\) {
+  clear: both;
 }
 
-.cll {
-	clear: left;
+.cl\(l\) {
+  clear: left;
 }
 
-.clr {
-	clear: right;
+.cl\(r\) {
+  clear: right;
 }
 
 //text alignment
-.tal {
-	text-align: left;
+.ta\(l\) {
+  text-align: left;
 }
 
-.tac {
-	text-align: center;
+.ta\(c\) {
+  text-align: center;
 }
 
-.tar {
-	text-align: right;
+.ta\(r\) {
+  text-align: right;
 }
 
-.taj {
-	text-align: justify;
+.ta\(j\) {
+  text-align: justify;
 }
 
 //text transform
-.ttu {
-	text-transform: uppercase;
+.tt\(u\) {
+  text-transform: uppercase;
 }
 
-.ttn {
-	text-transform: none;
+.tt\(n\) {
+  text-transform: none;
 }
 
 //text decorate
-.tdn {
-	text-decoration: none;
+.td\(n\) {
+  text-decoration: none;
 }
 
-.tdu {
-	text-decoration: underline;
+.td\(u\) {
+  text-decoration: underline;
 }
 
 //font styles
-.fsi {
-	font-style: italic;
+.fs\(i\) {
+  font-style: italic;
 }
 
-.fso {
-	font-style: oblique;
+.fs\(o\) {
+  font-style: oblique;
+}
+
+.lh\(0\) {
+  line-height: 0;
 }
 
 $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 @each $fw in $fws {
-	.fw#{fw} {
-		font-weight: $fw;
-	}
+  .fw\(#{$fw}\) {
+    font-weight: $fw;
+  }
 }
 
 //font families
-.ffs {
-	font-family: serif;
+.ff\(s\) {
+  font-family: serif;
 }
 
-.ffss {
-	font-family: sans-serif;
+.ff\(ss\) {
+  font-family: sans-serif;
 }
 
 //background color
-.bgc-white {
-	background-color: $color-white;
+.bgc\(white\) {
+  background-color: $color-white;
 }
 
-.bgc-gray {
-	background-color: $color-gray;
+.bgc\(gray\) {
+  background-color: $color-gray;
 }
 
-.bgc-black {
-	background-color: $color-black;
+.bgc\(black\) {
+  background-color: $color-black;
 }
 
 //font color
-.c-white {
-	color: $color-white;
+.c\(white\) {
+  color: $color-white;
 }
 
-.c-gray {
-	color: $color-gray;
+.c\(gray\) {
+  color: $color-gray;
 }
 
-.c-black {
-	color: $color-black;
+.c\(black\) {
+  color: $color-black;
 }
 
 //opacity
-.op0 {
-	opacity: 0;
+
+.op\(0\) {
+  opacity: 0;
 }
 
-.op1 {
-	opacity: 1;
+.op\(\.1\) {
+  opacity: .1;
+}
+
+.op\(\.2\) {
+  opacity: .2;
+}
+
+.op\(\.3\) {
+  opacity: .3;
+}
+
+.op\(\.4\) {
+  opacity: .4;
+}
+
+.op\(\.5\) {
+  opacity: .5;
+}
+
+.op\(\.6\) {
+  opacity: .6;
+}
+
+.op\(\.7\) {
+  opacity: .7;
+}
+
+.op\(\.8\) {
+  opacity: .8;
+}
+
+.op\(\.9\) {
+  opacity: .9;
+}
+
+.op\(1\) {
+  opacity: 1;
 }
 
 //cursor
-.curp {
-	cursor: pointer;
+.cur\(p\) {
+  cursor: pointer;
 }
 
-.curc {
-	cursor: crosshair;
+.cur\(c\) {
+  cursor: crosshair;
 }
 
-.lsn {
-	list-style: none;
+.ls\(n\) {
+  list-style: none;
 }
 
 //border
-.bdn {
-	border: none;
+.bd\(n\) {
+  border: none;
 }
 
-.bd1-s-white {
-	border: 1px solid white;
+.bd\(1px\,s\,white\) {
+  border: 1px solid white;
 }
 
-.bd1-s-black {
-	border: 1px solid black;
+.bd\(1px\,s\,black\) {
+  border: 1px solid black;
 }
 
-.bd1-s-gray {
-	border: 1px solid gray;
+.bd\(1px\,s\,gray\) {
+  border: 1px solid gray;
 }
 
-.bt1-s-white {
-	border-top: 1px solid white;
+.bt\(1px\,s\,white\) {
+  border-top: 1px solid white;
 }
 
-.bb1-s-white {
-	border-bottom: 1px solid white;
+.bb\(1px\,s\,white\) {
+  border-bottom: 1px solid white;
 }
 
-.bt1-s-black {
-	border-top: 1px solid black;
+.bt\(1px\,s\,black\) {
+  border-top: 1px solid black;
 }
 
-.bb1-s-black {
-	border-bottom: 1px solid black;
+.bb\(1px\,s\,black\) {
+  border-bottom: 1px solid black;
 }
 
-.bt1-s-gray {
-	border-top: 1px solid gray;
+.bt\(1px\,s\,gray\) {
+  border-top: 1px solid gray;
 }
 
-.bb1-s-gray {
-	border-bottom: 1px solid gray;
+.bb\(1px\,s\,gray\) {
+  border-bottom: 1px solid gray;
+}
+
+.br\(1px\,s\,white\) {
+  border-right: 1px solid white;
+}
+
+.bl\(1px\,s\,white\) {
+  border-left: 1px solid white;
+}
+
+.br\(1px\,s\,black\) {
+  border-right: 1px solid black;
+}
+
+.bl\(1px\,s\,black\) {
+  border-left: 1px solid black;
+}
+
+.br\(1px\,s\,gray\) {
+  border-right: 1px solid gray;
+}
+
+.bl\(1px\,s\,gray\) {
+  border-left: 1px solid gray;
 }

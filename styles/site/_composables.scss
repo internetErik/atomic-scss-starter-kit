@@ -1,5 +1,13 @@
 //show or hide items at different breakpoints
-.show-tablet {
+.show-lg\(\) {
+	display: none;
+
+	@media all and (max-width: $bp-lg) {
+		display: block;
+	}
+}
+
+.show-tablet\(\) {
 	display: none;
 
 	@media all and (max-width: $bp-md) {
@@ -7,7 +15,7 @@
 	}
 }
 
-.show-mobile {
+.show-mobile\(\) {
 	display: none;
 
 	@media all and (max-width: $bp-sm) {
@@ -15,77 +23,102 @@
 	}
 }
 
+@media all and (max-width: $bp-lg) {
+	.hide-lg\(\) {
+		display: none;
+	}
+}
+
 @media all and (max-width: $bp-md) {
-	.hide-tablet {
+	.hide-tablet\(\) {
 		display: none;
 	}
 }
 
 @media all and (max-width: $bp-sm) {
-	.hide-mobile {
+	.hide-mobile\(\) {
 		display: none;
 	}
 }
 
 //use border-radius to create a circle shape
-.border-circle {
+.border-circle\(\) {
 	border-radius: 100%;
 }
 
 //force element to fill container height/width
-.max-height {
+.max-height\(\) {
 	height: 100%;
 }
 
-.max-width {
+.max-width\(\) {
 	width: 100%;
 }
 
 //center elements horizontally and/or vertically 
-.vertical-align {
+.vertical-align\(\) {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-.horizontal-align {
+.horizontal-align\(\) {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-.transform-center {
+.transform-center\(\) {
 	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.horizontal-align-absolute {
+.horizontal-align-absolute\(\) {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-.vertical-align-absolute {
+.vertical-align-absolute\(\) {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-.transform-center-absolute {
+.transform-center-absolute\(\) {
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.horizontal-align-fixed\(\) {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.vertical-align-fixed\(\) {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.transform-center-fixed\(\) {
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
 // use a checkbox to show and hide sibling elements with target class
-.toggle-sibling {
+.toggle-sibling\(\) {
 	display: none;
 }
 
-.toggle-sibling ~ .toggle-sibling-target {
+.toggle-sibling\(\) ~ .toggle-sibling-target {
 	display: none;
 }
 
@@ -94,64 +127,68 @@
 }
 
 //flex styles
-.flex-box {
+.flex-box\(\) {
 	display: flex;
 }
 
-.flex-box-inline {
+.flex-box\(if\) {
 	display: inline-flex;
 }
 
 //transforms
-.rotateZ45 {
+.rotateZ\(45deg\) {
 	transform: rotateZ(45deg);
 }
-.rotateZ90 {
+
+.rotateZ\(90deg\) {
 	transform: rotateZ(90deg);
 }
-.scale50 {
+
+.scale\(\.5\,\.5\) {
 	transform: scale(.5, .5); 
 }
-.scale150 {
+
+.scale\(1\.5\,1\.5\) {
 	transform: scale(1.5, 1.5); 
 }
-.scale200 {
+
+.scale\(2\,2\) {
 	transform: scale(2, 2); 
 }
 
 //transition settings
-.transition-opacity {
+.transition\(opacity\,\.3s\) {
 	transition: opacity .3s;
 }
 
-.transition-color {
+.transition\(color\,\.3s\) {
 	transition: color .3s;
 }
 
-.transition-background {
+.transition\(background\,\.3s\) {
 	transition: background .3s;
 }
 
-.transition-transform {
+.transition\(transform\,\.3s\) {
 	transition: transform .3s;
 }
 
-.transition-top {
+.transition\(top\,\.3s\) {
 	transition: top .3s;
 }
 
-.transition-left {
+.transition\(left\,\.3s\) {
 	transition: left .3s;
 }
 
-.transition-right {
+.transition\(right\,\.3s\) {
 	transition: right .3s;
 }
 
-.transition-bottom {
+.transition\(bottom\,\.3s\) {
 	transition: bottom .3s;
 }
 
-.transition-all {
+.transition\(all\,\.3s\) {
 	transition: all .3s;
 }
