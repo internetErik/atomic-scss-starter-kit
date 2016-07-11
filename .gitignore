@@ -15,7 +15,7 @@ node_modules
 .DS_Store
 
 # Ignore built css
-styles/site.css
+*.css
 
 # Ignore our test index.html file
 index.html
