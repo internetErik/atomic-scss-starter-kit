@@ -16,11 +16,13 @@ $color-gray: gray;
 $width-wrapper: 960px;
 
 // breakpoints
-	// Define these widths by the actual design! Don't use default values
-$bp-lgx: 1350px;
-$bp-lg: 1100px;
-$bp-md: 768px;
-$bp-sm: 500px;
+// starting from 400px and using * 1.4 to scale (500 * 1.4 = 560, etc.)
+	// Define these widths by the actual design!
+$bp-lgx: 1536px;
+$bp-lg: 1097px;
+$bp-md: 784px;
+$bp-sm: 560px;
+$bp-smx: 400px;
 
 $bp-wrapper: $width-wrapper;
 

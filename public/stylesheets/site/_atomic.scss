@@ -1,4 +1,4 @@
-$pxs: 0, 1, 5, 10, 15, 20, 25, 30, 40, 44, 50, 60, 70, 80, 90, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 500, 600, 700, 800;
+$pxs: 0, 1, 5, 10, 15, 20, 25, 30, 40, 44, 50, 60, 70, 75, 80, 90, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 500, 600, 700, 800;
 
 //padding/margin/height/width
 @each $w in $pxs {
@@ -89,8 +89,9 @@ $pxs: 0, 1, 5, 10, 15, 20, 25, 30, 40, 44, 50, 60, 70, 80, 90, 100, 125, 150, 17
   margin: 0 auto;
 }
 
-$perc: .01, .02, .03, .04, .05, .10, .15, .20, .25, .30, .35, .40, .45, .50, .55, .60, .65, .70, .75, .80, .85, .90, .95, 1;
-$percVal: '1', '2', '3', '4', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100';
+//padding/margin/height/width by percentage
+$perc: .01, .02, .03, .04, .05, .10, .1225, .15, .20, .25, .30, .333333, .35, .40, .45, .50, .55, .60, .65, .666666, .70, .75, .80, .85, .90, .95, 1, 1.1, 1.2, 1.3, 1.4, 1.5;
+$percVal: '1', '2', '3', '4', '5', '10', '12\.25', '15', '20', '25', '30', '33\.3333', '35', '40', '45', '50', '55', '60', '65', '66\.6666', '70', '75', '80', '85', '90', '95', '100', '110', '120' ,'130' ,'140' ,'150';
 @for $i from 1 through length($perc) {
     $val: nth($percVal, $i);
     $p: nth($perc, $i);
@@ -120,80 +121,7 @@ $percVal: '1', '2', '3', '4', '5', '10', '15', '20', '25', '30', '35', '40', '45
   }
 }
 
-
-.w12\.25\% {
-  width: 12.25%;
-}
-
-.h12\.25\% {
-  height: 12.25%;
-}
-
-.t12\.25\% {
-  top: 12.25%;
-}
-
-.b12\.25\% {
-  bottom: 12.25%;
-}
-
-.l12\.25\% {
-  left: 12.25%;
-}
-
-.r12\.25\% {
-  right: 12.25%;
-}
-
-.w33\.3333\% {
-  width: 33.3333%;
-}
-
-.h33\.3333\% {
-  height: 33.3333%;
-}
-
-.t33\.3333\% {
-  top: 33.3333%;
-}
-
-.b33\.3333\% {
-  bottom: 33.3333%;
-}
-
-.l33\.3333\% {
-  left: 33.3333%;
-}
-
-.r33\.3333\% {
-  right: 33.3333%;
-}
-
-.w66\.6666\% {
-  width: 66.6666%;
-}
-
-.h66\.6666\% {
-  height: 66.6666%;
-}
-
-.t66\.6666\% {
-  top: 66.6666%;
-}
-
-.b66\.6666\% {
-  bottom: 66.6666%;
-}
-
-.l66\.6666\% {
-  left: 66.6666%;
-}
-
-.r66\.6666\% {
-  right: 66.6666%;
-}
-
-$zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 99;
 
 @each $z in $zs {
   .z#{$z} {
@@ -216,6 +144,79 @@ $zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
 .dib {
   display: inline-block;
+}
+
+//flex
+.df {
+  display: flex;
+}
+
+.fxdr {
+  flex-direction: row;
+}
+
+.fxdc {
+  flex-direction: column;
+}
+
+.fxdrr {
+  flex-direction: row-reverse;
+}
+
+.fxdcr {
+  flex-direction: column-reverse;
+}
+
+.fxwn {
+  flex-wrap: nowrap;
+}
+
+.fxww {
+  flex-wrap: wrap;
+}
+
+.fxwr {
+  flex-wrap: wrap-reverse;
+}
+
+.jcfs {
+  justify-content: flex-start;
+}
+
+.jcfe {
+  justify-content: flex-end;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.aib {
+  align-items: baseline;
+}
+
+.aic {
+  align-items: center;
+}
+
+.asa {
+  align-self: auto;
+}
+
+.asb {
+  align-self: baseline;
+}
+
+.asc {
+  align-self: center;
 }
 
 //position
@@ -263,6 +264,10 @@ $zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
 .fr {
   float: right;
+}
+
+.fln {
+  float: none;
 }
 
 //clears
@@ -313,6 +318,60 @@ $zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
   text-decoration: underline;
 }
 
+//word break
+.wobn {
+  word-break: normal;
+}
+
+.wobk {
+  word-break: keep-all;
+}
+
+.wobba {
+  word-break: break-all;
+}
+
+.wownm {
+  word-wrap: normal;
+}
+
+.wown {
+  word-wrap: none;
+}
+
+.wowu {
+  word-wrap: unrestricted;
+}
+
+.wows {
+  word-wrap: suppress;
+}
+
+.wowb {
+  word-wrap: break-word;
+}
+
+//line height
+.lh1 {
+  line-height: 1;
+}
+
+.lh1\.2 {
+  line-height: 1.2;
+}
+
+.lh1\.3 {
+  line-height: 1.3;
+}
+
+.lh1\.4 {
+  line-height: 1.4;
+}
+
+.lh1\.5 {
+  line-height: 1.5;
+}
+
 //font styles
 .fsi {
   font-style: italic;
@@ -322,6 +381,7 @@ $zs: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
   font-style: oblique;
 }
 
+//font weight
 $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 @each $fw in $fws {
@@ -390,12 +450,14 @@ $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 }
 
 //opacity
-.op0 {
-  opacity: 0;
-}
-
-.op1 {
-  opacity: 1;
+$ops:  0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1;
+$opVal:'0','\\.1', '\\.2', '\\.3', '\\.4', '\\.5', '\\.6', '\\.7', '\\.8', '\\.9', '1';
+@for $i from 1 through length($ops) {
+  $val: nth($opVal, $i);
+  $op: nth($ops, $i);
+  .op#{$val} {
+    opacity: #{$op};
+  }
 }
 
 //cursor
@@ -474,4 +536,12 @@ $fws: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
 .bl1-s-black {
   border-left: 1px solid $color-black;
+}
+
+//border radius
+$bdrss: 1, 2, 3, 4, 5;
+@each $bdrs in $bdrss {
+  .bdrs#{$bdrs} {
+    border-radius: #{$bdrs}px;
+  }
 }
