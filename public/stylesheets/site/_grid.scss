@@ -1,3 +1,39 @@
+@import "config/variables";
+
 .grid-container {
 	@include container($width-wrapper);
+}
+
+@for $i from 1 through $grid-columns {
+  .span-#{$i} {
+    @include span($i);
+  }
+}
+
+.span-last {
+	@include last;
+}
+
+@media all and (max-width: $bp-md) {
+	@for $i from 1 through $grid-columns {
+	  .span-#{$i}\@md {
+	    @include span($i);
+	  }
+	}
+
+	.span-last\@md {
+		@include last;
+	}
+}
+
+@media all and (max-width: $bp-sm) {
+	@for $i from 1 through $grid-columns {
+	  .span-#{$i}\@sm {
+	    @include span($i);
+	  }
+	}
+
+	.span-last\@sm {
+		@include last;
+	}
 }

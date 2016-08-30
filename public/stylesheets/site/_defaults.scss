@@ -13,6 +13,11 @@ input {
 	outline: none; 
 }
 
+a {
+	color: inherit;
+	transition: color .3s;
+}
+
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: white;
 }

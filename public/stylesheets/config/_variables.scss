@@ -5,6 +5,7 @@
 	// $width-large
 
 // base font -- assuming we are working with font-size: 10px;
+// default is 18px
 $font-size-base: 1.8em;
 
 // wire framing colors
@@ -36,7 +37,11 @@ $bp-wrapper: $width-wrapper;
 	// $color-brand-gold: #ffb81b;
 	// $color-brand-blue: #0e254d;
 
-// susy config
+// susy grid config
+
+$grid-columns: 12;
+$grid-gutters: .1;
+
 $susy: (
 	flow: ltr,
 	math: fluid,
@@ -44,8 +49,8 @@ $susy: (
 	gutter-position: after,
 	container: auto,
 	container-position: center,
-	columns: 4,
-	gutters: .25,
+	columns: $grid-columns,
+	gutters: $grid-gutters,
 	column-width: false,
 	global-box-sizing: border-box,
 	last-flow: to,

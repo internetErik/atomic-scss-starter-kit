@@ -4,7 +4,8 @@
 
    ++++++++++++Additions+++++++++++++++
    
-   reset buttons to have no borders or background color
+   - reset buttons to have no borders or background color
+   - no 'x' for clearing field in IE
 */
 
 html, body, div, span, applet, object, iframe,
@@ -41,8 +42,8 @@ ol, ul {
 blockquote, q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote::before, blockquote::after,
+q::before, q::after {
   content: '';
   content: none;
 }
@@ -52,6 +53,9 @@ table {
 }
 button {
   border: none;
-  background: inherit;
+  background: transparent;
   cursor: pointer;
 }
+
+// removes the 'x' clear button from inputs (IE/Edge)
+*::-ms-clear { display: none; }
