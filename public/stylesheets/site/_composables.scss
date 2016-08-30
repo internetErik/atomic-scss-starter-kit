@@ -1,3 +1,9 @@
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 //show or hide items at different breakpoints
 .show-tablet {
 	display: none;
