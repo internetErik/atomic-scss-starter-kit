@@ -111,6 +111,124 @@
 	transform: translate(-50%, -50%);
 }
 
+@media all and (max-width: $bp-md) {
+	.vertical-align\@md {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.horizontal-align\@md {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.transform-center\@md {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.horizontal-align-absolute\@md {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.vertical-align-absolute\@md {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.transform-center-absolute\@md {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.horizontal-align-fixed\@md {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.vertical-align-fixed\@md {
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.transform-center-fixed\@md {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media all and (max-width: $bp-sm) {
+	.vertical-align\@sm {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.horizontal-align\@sm {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.transform-center\@sm {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.horizontal-align-absolute\@sm {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.vertical-align-absolute\@sm {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.transform-center-absolute\@sm {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.horizontal-align-fixed\@sm {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.vertical-align-fixed\@sm {
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.transform-center-fixed\@sm {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
 // use a checkbox to show and hide sibling elements with target class
 .toggle-sibling {
 	display: none;
@@ -122,15 +240,6 @@
 
 .toggle-sibling:checked ~ .toggle-sibling-target {
 	display: block;
-}
-
-//flex styles
-.flex-box {
-	display: flex;
-}
-
-.flex-box-inline {
-	display: inline-flex;
 }
 
 //transforms
@@ -188,5 +297,5 @@
 }
 
 .background-transparent {
-	background:transparent;
+	background: transparent;
 }

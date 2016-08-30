@@ -1,7 +1,6 @@
 # scssBlitz
 
-Scss starter kit emphasizing atomic and composable styles (functional CSS), but 
-not preventing the use of BEM or OOCSS techniques for overriding.
+Scss starter kit emphasizing atomic styles but not preventing the use of BEM or OOCSS techniques for overriding.
 
 ## How to use
 
