@@ -24,6 +24,11 @@
 	.span-last\@md {
 		@include last;
 	}
+
+	.span-last-clear\@md {
+		float: left;
+		@include gutter();
+	}
 }
 
 @media all and (max-width: $bp-sm) {
@@ -35,5 +40,10 @@
 
 	.span-last\@sm {
 		@include last;
+	}
+
+	.span-last-clear\@sm {
+		float: left;
+		@include gutter();
 	}
 }

@@ -6,11 +6,12 @@
 
 // pick your poison
 @import "config/reset";  //modified
-//@import "config/normalize";
+@import "../../node_modules/normalize-scss/sass/normalize";
+// @include normalize();
 
 //font awesome is recommended for speedy development
 	// keep icomoon (https://icomoon.io/) in mind, also
-@import "../../node_modules/font-awesome/scss/font-awesome";
+// @import "../../node_modules/font-awesome/scss/font-awesome";
 
 //font-awesome overrides
 	// this is so we can develop quickly with icons to achieve wireframes
@@ -26,4 +27,4 @@
 @import "site/atomic";
 
 //styles that can be reused
-@import "site/composables";
+@import "site/helpers";
