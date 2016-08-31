@@ -7,7 +7,7 @@ Scss starter kit emphasizing atomic styles but not preventing the use of BEM or 
 * Clone this repo
 * run `npm install` in the base directory
 * run `gulp watch`
-* run `node app` or `nodemon app`
+* run `node` or `nodemon` (which will start `app.js`)
 
 ## What's Included?
 
@@ -23,3 +23,11 @@ Scss starter kit emphasizing atomic styles but not preventing the use of BEM or 
 * [Susy](http://susy.oddbird.net/) grid system
 * [Font Awesome](http://fontawesome.io/)
 * Boilerplate organization for scss files
+
+## Why?
+
+This repository serves a few purposes.
+
+* A place to get a general purpose atomic css style sheet
+* A simple starter kit for style guides, prototypes
+* An educational tool for practicing atomic styling
