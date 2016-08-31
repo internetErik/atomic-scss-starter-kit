@@ -17,5 +17,8 @@ node_modules
 # Ignore built css
 /client/css
 
+# Ignore hbs files assembled to html
+/assembled_hbs
+
 # Ignore our test index.html file
 index.html
