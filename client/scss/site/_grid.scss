@@ -1,13 +1,29 @@
 @import "config/variables";
 
+/**
+ * Susy is used for creating grids.
+ */
+
 .grid-container {
 	@include container($width-wrapper);
 }
 
-@for $i from 1 through $grid-columns {
+@for $i from 1 through $grid-columns-lg {
   .span-#{$i} {
     @include span($i);
   }
+}
+
+.gallery-columns-3 {
+	.span-4:nth-child(3n+3) {
+		@include last;
+	}
+}
+
+.gallery-columns-4 {
+	.span-3:nth-child(4n+4) {
+		@include last;
+	}
 }
 
 .span-last {
@@ -15,11 +31,32 @@
 }
 
 @media all and (max-width: $bp-md) {
-	@for $i from 1 through $grid-columns {
+	@for $i from 1 through $grid-columns-md {
 	  .span-#{$i}\@md {
 	    @include span($i);
 	  }
 	}
+
+	.gallery-columns-3 {
+		.span-4:nth-child(3n+3) {
+			float: left;
+			@include gutter();
+		}
+
+		.span-6\@md:nth-child(2n+2) {
+			@include last;
+		}
+	}
+
+.gallery-columns-4 {
+	.span-3:nth-child(4n+4) {
+		float: left;
+		@include gutter();
+	}
+	.span-4\@md:nth-child(3n+3) {
+		@include last;
+	}
+}
 
 	.span-last\@md {
 		@include last;
@@ -32,11 +69,28 @@
 }
 
 @media all and (max-width: $bp-sm) {
-	@for $i from 1 through $grid-columns {
+	@for $i from 1 through $grid-columns-sm {
 	  .span-#{$i}\@sm {
 	    @include span($i);
 	  }
 	}
+
+	.gallery-columns-3 {
+		.span-4\@md:nth-child(2n+2) {
+			float: left;
+			@include gutter();
+		}
+	}
+
+.gallery-columns-4 {
+	.span-4\@md:nth-child(3n+3) {
+		float: left;
+		@include gutter();
+	}
+	.span-6\@sm:nth-child(2n+2) {
+		@include last;
+	}
+}
 
 	.span-last\@sm {
 		@include last;

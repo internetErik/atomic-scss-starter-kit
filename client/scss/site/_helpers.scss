@@ -4,6 +4,12 @@
   clear: both;
 }
 
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 //show or hide items at different breakpoints
 .show-tablet {
 	display: none;

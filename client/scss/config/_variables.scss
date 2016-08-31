@@ -9,20 +9,21 @@
 $font-size-base: 1.8em;
 
 // wire framing colors
-$color-black: #101010;
-$color-white: #fefefe;
+$color-black    : #101010;
+$color-white    : #fefefe;
 $color-lightgray: lightgray;
-$color-gray: gray;
+$color-gray     : gray;
 
-$width-wrapper: 960px;
+//width of site's content
+$width-wrapper: 1024px;
 
 // breakpoints
 // starting from 400px and using * 1.4 to scale (500 * 1.4 = 560, etc.)
 	// Redefine these widths by the actual design!
 $bp-lgx: 1536px;
-$bp-lg: 1097px;
-$bp-md: 784px;
-$bp-sm: 560px;
+$bp-lg : 1097px;
+$bp-md : 784px;
+$bp-sm : 560px;
 $bp-smx: 400px;
 
 $bp-wrapper: $width-wrapper;
@@ -39,32 +40,36 @@ $bp-wrapper: $width-wrapper;
 
 // susy grid config
 
-$grid-columns: 12;
-$grid-gutters: .1;
+$grid-columns-lg: 12;
+$grid-gutters-lg: .1;
+$grid-columns-md: 12;
+$grid-gutters-md: .1;
+$grid-columns-sm: 12;
+$grid-gutters-sm: .1;
 
 $susy: (
-	flow: ltr,
-	math: fluid,
-	output: float,
-	gutter-position: after,
-	container: auto,
+	flow              : ltr,
+	math              : fluid,
+	output            : float,
+	gutter-position   : after,
+	container         : auto,
 	container-position: center,
-	columns: $grid-columns,
-	gutters: $grid-gutters,
-	column-width: false,
-	global-box-sizing: border-box,
-	last-flow: to,
+	columns           : $grid-columns-lg,
+	gutters           : $grid-gutters-lg,
+	column-width      : false,
+	global-box-sizing : border-box,
+	last-flow         : to,
 	debug: (
-		image: hide,
-		color: rgba(#66f, .25),
+		image : hide,
+		color : rgba(#66f, .25),
 		output: background,
 		toggle: top right,
 	),
 	use-custom: (
-		background-image: true,
+		background-image  : true,
 		background-options: false,
-		box-sizing: true,
-		clearfix: false,
-		rem: true,
+		box-sizing        : true,
+		clearfix          : false,
+		rem               : true,
 	)
 );
