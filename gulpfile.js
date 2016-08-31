@@ -8,10 +8,10 @@ var gulp         = require('gulp'),
  * Create variables for our project paths so we can change in one place
  */
 var paths = {
-  'sass'     : './public/stylesheets/**/*.scss',
-  'css'      : './public/stylesheets/',
-  'blitzCss' : './public/stylesheets/blitz.css',
-  'allCss'   : './public/stylesheets/*.css',
+  'sass'     : './client/scss/**/*.scss',
+  'css'      : './client/css/',
+  'blitzCss' : './client/css/blitz.css',
+  'allCss'   : './client/css/*.css',
   'hbs'      : ['./views/**/*.hbs', './views/*.hbs'],
   'builtHtml': './assembled_hbs/',
   'html'     : './assembled_hbs/site.html'
