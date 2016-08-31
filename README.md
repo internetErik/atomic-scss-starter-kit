@@ -1,13 +1,13 @@
-# scssBlitz
+# Atomic SCSS Starter Kit
 
 Scss starter kit emphasizing atomic styles but not preventing the use of BEM or OOCSS techniques for overriding.
 
 ## How to use
 
-* Clone this repo
+* Clone this repo with `git clone https://github.com/internetErik/atomic-scss-starter-kit.git`
 * run `npm install` in the base directory
-* run `gulp watch`
-* run `node` or `nodemon` (which will start `app.js`)
+* run `gulp watch` to build scss files.
+* run `node` or `nodemon` (which will start `app.js`) to start express
 
 ## What's Included?
 
@@ -28,6 +28,6 @@ Scss starter kit emphasizing atomic styles but not preventing the use of BEM or 
 
 This repository serves a few purposes.
 
-* A place to get a general purpose atomic css style sheet
+* A place to maintain a general purpose atomic css style sheet
 * A simple starter kit for style guides, prototypes
 * An educational tool for practicing atomic styling
