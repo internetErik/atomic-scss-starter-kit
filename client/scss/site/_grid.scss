@@ -6,6 +6,7 @@
 
 .grid-container {
 	@include container($width-wrapper);
+	padding: $padding-grid-container
 }
 
 @for $i from 1 through $grid-columns-lg {
@@ -53,6 +54,7 @@
 		float: left;
 		@include gutter();
 	}
+
 	.span-4\@md:nth-child(3n+3) {
 		@include last;
 	}
@@ -87,6 +89,7 @@
 		float: left;
 		@include gutter();
 	}
+
 	.span-6\@sm:nth-child(2n+2) {
 		@include last;
 	}
