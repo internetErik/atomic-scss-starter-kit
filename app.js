@@ -11,8 +11,17 @@ var users  = require('./routes/users');
 
 var app = express();
 
+var handlebarsConfig = {
+  extname      :'hbs', 
+  defaultLayout:'layout.hbs', 
+  partialsDir  : [
+    'views/partials',   // parts of a page
+    'views/components', // items that are reused
+  ],
+};
+
 // view engine setup
-app.engine('hbs', exphbs({extname:'hbs', defaultLayout:'layout.hbs', partialsDir: ['views/partials','views/components']}));
+app.engine('hbs', exphbs(handlebarsConfig));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
