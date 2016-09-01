@@ -36,3 +36,7 @@
 	// often nothing or very little will be page specific
 	// overrides for components and partials on particular pages will go here
 //@import "pages/...";
+
+//if you have a fix that specifically targets old (non-evergreen) browsers
+//put it here so it can be easily removed when browser support is droppped
+@import "site/shame";
