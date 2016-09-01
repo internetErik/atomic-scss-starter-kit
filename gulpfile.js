@@ -55,7 +55,7 @@ gulp.task('sass', function(){
 /**
  * builds all the css, first assembling html and removing unused css
  */
-gulp.task('buildCss', ['assemble','sass'/*,'uncss'*/], function(){
+gulp.task('buildCss', ['assemble','sass','uncss'], function(){
   return gulp.src(paths.allCss)
     .pipe(concat('site.css'))
     .pipe(gulp.dest(paths.css));
