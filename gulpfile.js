@@ -10,7 +10,7 @@ var gulp         = require('gulp'),
 var paths = {
   'sass'     : './client/scss/**/*.scss',
   'css'      : './client/css/',
-  'blitzCss' : './client/css/blitz.css',
+  'atomicCss': './client/css/atomic.css',
   'allCss'   : './client/css/*.css',
   'hbs'      : ['./views/**/*.hbs', './views/*.hbs'],
   'builtHtml': './assembled_hbs/',
@@ -29,10 +29,10 @@ gulp.task('assemble', function () {
 
 /**
  * Uses the built html from 'assemble' to remove unused css
- * from blitz.css
+ * from atomic.css
  */
 gulp.task('uncss', function(){
-  return gulp.src(paths.blitzCss)
+  return gulp.src(paths.atomicCss)
     .pipe(uncss({
         html: [paths.html],
         options: {
