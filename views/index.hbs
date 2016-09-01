@@ -2,63 +2,13 @@
 <h1 class="heading-1 fw600">Sample Elements</h1>
 <hr class="m10-0 mb20 bd1-s-black">
 
-<section class="mb50">
-	<h2 class="heading-2 fw600">Headings</h2>
-	<hr class="m10-0">
-	<div class="heading-1">.heading-1</div>
-	<div class="heading-2">.heading-2</div>
-	<div class="heading-3">.heading-3</div>
-	<div class="heading-4">.heading-4</div>
-	<div class="heading-5">.heading-5</div>
-	<div class="heading-6">.heading-6</div>
-</section>
+{{> heading }}
 
-<section class="mb50">
-	<h2 class="heading-2 fw600">Text</h2>
-	<hr class="m10-0">
-	<div>
-		normal text <a href="http://docs.emmet.io/cheat-sheet/">Default Link (Emmet Cheat Sheet)</a>
-	</div>
-	<div class="fsi">
-		.fsi
-	</div>
-	<div>
-		<span class="fw900">.fw900</span>
-		<span class="fw800">.fw800</span>
-		<span class="fw700">.fw700</span>
-		<span class="fw600">.fw600</span>
-		<span class="fw500">.fw500</span>
-		<span class="fw400">.fw400</span>
-		<span class="fw300">.fw300</span>
-		<span class="fw200">.fw200</span>
-		<span class="fw100">.fw100</span>
-	</div>
-	<div class="tdu">.tdu</div>
-</section>
+{{> text }}
 
-{{!-- include partial of grid demo/options --}}
+{{> padding }}
+
 {{> grids }}
 
-<section class="mb50">
-	<h2 class="heading-2 fw600">Position</h2>
-	<hr class="m10-0">
-	<div class="posr h400 bd1-s-black tac mb20 span-6">
-		.posr
-		<div class="posa h100 w100 bd1-s-black r0 b30">
-			.posa.r0.b30
-		</div>
-	</div>
-	<div class="posr h400 bd1-s-black tac span-6 span-last">
-		.posr
+{{> position }}
 
-		<div class="vertical-align-absolute bd1-s-black">.vertical-align-absolute</div>
-	</div>
-	<div class="posr h400 bd1-s-black tac mb20 span-6">
-		.posr
-		<div class="horizontal-align-absolute bd1-s-black">.horizontal-align-absolute</div>
-	</div>
-	<div class="posr h400 bd1-s-black tac span-6 span-last">
-		.posr
-		<div class="transform-center-absolute bd1-s-black">.transform-center-absolute</div>
-	</div>
-</section>
