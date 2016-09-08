@@ -6,6 +6,7 @@
     "start": "node app"
   },
   "dependencies": {
+    "atomic-scss": "^1.0.0",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "debug": "^2.2.0",
