@@ -61,6 +61,8 @@ gulp.task('buildCss', ['assemble','sass'/*,'uncss'*/], function(){
     .pipe(gulp.dest(paths.css));
 });
 
+gulp.task('default', ['buildCss'], function() {});
+
 gulp.task('watch', function() {
     gulp.start('buildCss');
     gulp.watch(paths.sass, ['buildCss']);
