@@ -31,7 +31,7 @@ gulp.task('assemble', function () {
  * Uses the built html from 'assemble' to remove unused css
  * from atomic.css
  */
-gulp.task('uncss', function(){
+gulp.task('uncss', ['sass', 'assemble'], function(){
   return gulp.src(paths.atomicCss)
     .pipe(uncss({
         html: [paths.html],
@@ -55,7 +55,7 @@ gulp.task('sass', function(){
 /**
  * builds all the css, first assembling html and removing unused css
  */
-gulp.task('buildCss', ['assemble','sass'/*,'uncss'*/], function(){
+gulp.task('buildCss', ['uncss'], function(){
   return gulp.src(paths.allCss)
     .pipe(concat('site.css'))
     .pipe(gulp.dest(paths.css));
